@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabinet Infirmier - DEFR.. Cél..</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f7fc;
+            color: #333;
+        }
+	h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600; /* Tu peux ajuster l'épaisseur si nécessaire */
+        }
+	h1,footer {
+	    font-family: 'Lora', serif;
+            font-weight: 700; /* Plus épais pour plus d'impact */
+        }
+	.mention {
+    color: white;  /* Couleur du texte par défaut */
+    text-decoration: none;  /* Supprimer la soulignure */
+}
+
+.mention:hover {
+    color: #1abc9c;  /* Changer la couleur lors du survol */
+    text-decoration: underline;  /* Souligner au survol */
+}	
+	iframe {
+		border-radius: 10%;
+	}
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+        nav {
+            text-align: center;
+            padding: 10px;
+            background-color: #34495e;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+        nav a:hover {
+            background-color: #1abc9c;
+        }
+
+	/* Section des horaires */
+	/* Section des horaires */
+.hours-table {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hours-table h3 {
+    font-size: 22px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.hours-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.hours-table table td {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.hours-table table td:first-child {
+    font-weight: bold;
+    color: #7f8c8d;
+}
+
+.hours-table table td:last-child {
+    color: #2ecc71;
+    font-weight: normal;
+}
+
+.hours-table table tr {
+    border-bottom: 1px solid #ccc;
+}
+
+.service {
+    background: white;
+    padding: 15px;
+    width: 45%;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service:hover {
+    transform: scale(1.05); /* Agrandissement léger au survol */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Ombre plus marquée */
+    cursor: pointer; /* Change le curseur pour indiquer que c'est cliquable */
+}
+        .parallax {
+            background-image: url('https://img.figarocms.net/cadremploi-edito/Zv5u-7VsGrYSwVL9_Infirmier.jpg?auto=format,compress&rect=0,395,4724,2362&w=800&h=400');
+            height: 300px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        @media (max-width: 768px) {
+            .parallax {
+                background-attachment: scroll;
+                height: 200px;
+                font-size: 18px;
+            }
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+        h2 {
+            color: #2c3e50;
+        }
+        .services {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .service {
+            background: white;
+            padding: 15px;
+            width: 45%;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #1abc9c;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #16a085;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #2c3e50;
+            color: white;
+            margin-top: 20px;
+        }
+        /* Bouton Haut de Page */
+        #topBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #1abc9c;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        #topBtn:hover {
+            background-color: #16a085;
+        }
+	
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Cabinet Infirmier - DF.. Cél..</h1>
+    <p>Des soins de qualité, à domicile</p>
+</header>
+
+<nav>
+    <a href="#about" class="scroll-link">À Propos</a>
+    <a href="#services" class="scroll-link">Services</a>
+    <a href="#map" class="scroll-link">Localisation & Horaires</a>
+    <a href="#contact" class="scroll-link">Contact</a>
+</nav>
+
+<!-- Section Parallax -->
+<div class="parallax">
+    Prendre soin de vous, ma priorité
+</div>
+
+<div class="container">
+    <section id="about">
+        <h2>À Propos</h2>
+	<p>Le cabinet infirmier DEF.. Cél.. est situé à Thomery, où je propose des soins infirmiers à domicile, adaptés à vos besoins et votre bien-être. Que vous ayez besoin de soins ponctuels ou d'un suivi régulier, je suis à votre disposition pour vous offrir un service personnalisé et professionnel. Mon objectif est de vous apporter les soins nécessaires dans le confort de votre domicile, tout en garantissant écoute, attention et respect de votre intimité.</p>
+    </section>
+    <br><br>
+    <section id="services">
+        <h2>Services</h2>
+        <div class="services">
+            <div class="service">
+                <h3>Soins à Domicile</h3>
+                <p>Administration de médicaments, pansements, suivi des maladies chroniques...</p>
+            </div>
+            <div class="service">
+                <h3>Prise de Sang</h3>
+                <p>Prélèvements sanguins, avec transmission rapide des résultats.</p>
+            </div>
+            <div class="service">
+                <h3>Suivi Post-Opératoire</h3>
+                <p>Surveillance et soins après une intervention chirurgicale.</p>
+            </div>
+            <div class="service">
+                <h3>Vaccinations</h3>
+                <p>Administration de vaccins selon les recommandations en vigueur.</p>
+            </div>
+        </div>
+    </section>
+    <br><br>
+    <!-- Section Google Maps -->
+    <section id="map">
+        <h2>Localisation & Horaires</h2>
+        <div class="map-container">
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2086.204231385692!2d2.7760290786285053!3d48.4129129    68481216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47ef5f12fbba9d1f%3A0x21b93d9aa18633a1!2scabinet%20infirmier%20DEFRANCE%20C%C3%A9line!    5e1!3m2!1sfr!2sfr!4v1739787325165!5m2!1sfr!2sfr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+	
+         </div>
+         <br>
+         <i><strong><p style="text-align: left; font-size: 18px; margin-top: 10px;">
+         📍 44 Rue Sadi Carnot, 77810 Thomery
+                 </p></strong></i>
+    <br><br>
+    <div class="hours-table">
+    <h3> 🕐 Horaires d'ouverture </h3>
+    <table>
+        <tr>
+            <td><strong>Lundi</strong></td>
+            <td>08:00–19:00</td>
+        </tr>
+        <tr>
+            <td><strong>Mardi</strong></td>
+            <td>08:00–19:00</td>
+        </tr>
+        <tr>
+            <td><strong>Mercredi</strong></td>
+            <td>08:00–19:00</td>
+        </tr>
+        <tr>
+            <td><strong>Jeudi</strong></td>
+            <td>08:00–19:00</td>
+        </tr>
+        <tr>
+            <td><strong>Vendredi</strong></td>
+            <td>08:00–19:00</td>
+        </tr>
+        <tr>
+            <td><strong>Samedi</strong></td>
+            <td>08:00–19:00</td>
+        </tr>
+        <tr>
+            <td><strong>Dimanche</strong></td>
+            <td>08:00–19:00</td>
+        </tr>
+    </table>
+</div>
+    </section>
+    <br><br><br>
+    <section id="contact">
+        <h2>Contact</h2>
+        <form>
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+</div>
+
+<!-- Bouton Retour Haut -->
+<button id="topBtn">↑</button>
+<br><br>
+<footer>
+    <p>Cabinet Infirmier - Mme DEF.. Cél.. &nbsp | &nbsp ☎️  : 06 68 XX XX XX &nbsp | &nbsp Adresse:  44 Rue Sadi Carnot, 77810 Thomery</p>
+    <p style="text-align: center"><font face="Arial"><strong> 📧 contact@cabinet-def...fr</strong> | <a class="mention" href="mentions_legals.html">mentions légales</a></font></p>
+</footer>
+
+<script>
+    // Animation du scroll fluide
+    document.querySelectorAll('.scroll-link').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    });
+
+    // Bouton Haut de Page
+    const topBtn = document.getElementById("topBtn");
+    window.onscroll = function() {
+        if (document.documentElement.scrollTop > 300) {
+            topBtn.style.display = "block";
+        } else {
+            topBtn.style.display = "none";
+        }
+    };
+    topBtn.addEventListener("click", function() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+</script>
+
+</body>
+</html>
